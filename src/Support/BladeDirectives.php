@@ -12,9 +12,9 @@ class BladeDirectives implements IBladeDirectives
             return null;
         }
 
-        $manifest = json_decode(file_get_contents($manifestPath), $assoc = true);
+        $manifest = json_decode(file_get_contents($manifestPath), true);
 
-        $path = 'resources/css/';
+        $path = "resources/$extension/";
         $assets = 'assets/';
 
         $_file = $manifest[$path . $file . '.' . $extension]['file'];
